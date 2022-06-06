@@ -1884,6 +1884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3882145885830742441, guid: ce9dbcd2bf46109449ac7bd6c7d8d664, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6286361606812385791, guid: ce9dbcd2bf46109449ac7bd6c7d8d664, type: 3}
       propertyPath: m_Name
       value: Tree
