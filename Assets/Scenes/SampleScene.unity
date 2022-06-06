@@ -1115,7 +1115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7937352263359100538, guid: 420211b3bb4e78c4f9418ecd6d20fccc, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 8304652239584552120, guid: 420211b3bb4e78c4f9418ecd6d20fccc, type: 3}
       propertyPath: m_Enabled
@@ -1183,6 +1183,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 420211b3bb4e78c4f9418ecd6d20fccc, type: 3}
+--- !u!1 &754807846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7937352263359100538, guid: 420211b3bb4e78c4f9418ecd6d20fccc, type: 3}
+  m_PrefabInstance: {fileID: 754807845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &754807847
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754807846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 433b823c3fd745f4581d880c77a8f5cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &919969846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1625,7 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 97db4451268b4c4438b34b397fabc691, type: 2}
   m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
+  m_TreeBillboardDistance: 193
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
