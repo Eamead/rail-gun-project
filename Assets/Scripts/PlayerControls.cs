@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
+
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
 
@@ -23,6 +24,8 @@ public class PlayerControls : MonoBehaviour
 
     [SerializeField] private float rotationFactor = 1f;
 
+    //ParticleSystem partStart;
+
     float horizontalSlide;
     float verticalSlide;
 
@@ -30,19 +33,19 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //partStart = GetComponent<ParticleSystem>();
     }
 
     private void OnEnable()
     {
         movement.Enable();
-        //fire.Enable();
+        fire.Enable();
     }
 
     private void OnDisable()
     {
         movement.Disable();
-        //fire.Disable();
+        fire.Disable();
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -83,5 +87,15 @@ public class PlayerControls : MonoBehaviour
         float localz = transform.localPosition.z;
 
         transform.localPosition = new Vector3(clampx, clampy, localz);
+    }
+
+    private void ProcessFiring()
+    {
+        // If the fire button is pressed, fire a leaf.
+        if (fire.triggered)
+        {
+            //partStart.enabled = true;
+            Debug.Log("Firing");
+        }
     }
 }
