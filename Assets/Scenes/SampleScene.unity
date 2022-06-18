@@ -294,6 +294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 420211b3bb4e78c4f9418ecd6d20fccc, type: 3}
+--- !u!1 &164533392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5426649838508836865, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+  m_PrefabInstance: {fileID: 4314683462334804383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294544148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,6 +2033,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1163164257586122472, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+      propertyPath: leaves.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163164257586122472, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+      propertyPath: leaves.Array.data[0]
+      value: 
+      objectReference: {fileID: 164533392}
+    - target: {fileID: 1163164257586122472, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+      propertyPath: leaves.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093275166109706373, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+      propertyPath: m_Name
+      value: Leaves Back
+      objectReference: {fileID: 0}
     - target: {fileID: 4314683462021766804, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2075,6 +2096,10 @@ PrefabInstance:
     - target: {fileID: 4314683462021766805, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
       propertyPath: m_Name
       value: Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426649838508836865, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
+      propertyPath: m_Name
+      value: Leaves Front
       objectReference: {fileID: 0}
     - target: {fileID: 5426649838508836865, guid: 78e46edb250290c498617bc5cdc42e26, type: 3}
       propertyPath: m_IsActive

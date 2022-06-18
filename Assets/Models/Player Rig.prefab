@@ -163,7 +163,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1121645826270106009, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: m_Name
-      value: Laser
+      value: Laser Front
       objectReference: {fileID: 0}
     - target: {fileID: 3189607246472037813, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: m_RootOrder
@@ -343,7 +343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212377066101714321, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 100.57
+      value: 101.42
       objectReference: {fileID: 0}
     - target: {fileID: 4212377066101714321, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: TrailModule.widthOverTrail.scalar
@@ -351,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212377066101714321, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 15
+      value: 20.4
       objectReference: {fileID: 0}
     - target: {fileID: 4212377066101714321, guid: fa3c24a0fa4d9f042ae22b2915538808, type: 3}
       propertyPath: InitialModule.startLifetime.scalar

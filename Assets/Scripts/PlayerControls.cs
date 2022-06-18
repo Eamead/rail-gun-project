@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,21 +6,35 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-
+    [Header("General Setup Settings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
 
+    [Header("Leaf Shooting Array")]
+    [SerializeField] GameObject[] leaves;
+
+    [Header("Player Speed and Range")]
+    [Tooltip("The horizontal speed of the player")]
     // Speed of player movement and range of movement
     [SerializeField] float speedX = 0.1f;
+    [Tooltip("The horizontal range of motion of the player on the screen")]
     [SerializeField] float xRange = 1.0f;
+    [Tooltip("The vertical speed of the player")]
     [SerializeField] float speedY = 0.1f;
+    [Tooltip("The minimum vertical range of motion of the player on the screen")]
     [SerializeField] float minYRange = 1.0f;
+    [Tooltip("The maximum vertical range of motion of the player on the screen")]
     [SerializeField] float maxYRange = 2.0f;
 
+    [Header("Player Rotation")]
     // rotation values.
+    [Tooltip("The speed of the player's forward rotation")]
     [SerializeField] float positionPitch = -2f;
+    [Tooltip("The amount of forward rotation")]
     [SerializeField] float controlPitch = -15f;
+    [Tooltip("The speed of the player's sideways rotation")]
     [SerializeField] float positionYaw = 3f;
+    [Tooltip("The amount of roll when swerving")]
     [SerializeField] float controlRoll = -15f;
 
     [SerializeField] private float rotationFactor = 1f;
@@ -91,11 +106,28 @@ public class PlayerControls : MonoBehaviour
 
     private void ProcessFiring()
     {
-        // If the fire button is pressed, fire a leaf.
-        if (fire.triggered)
+        // If the fire button is held, fire a leaf.
+        if (fire.ReadValue<float>() > 0)
         {
             //partStart.enabled = true;
-            Debug.Log("Firing");
+            toggleLeafCannon(true);
+        }
+        else
+        {
+           toggleLeafCannon(false);
         }
     }
+
+    void toggleLeafCannon(bool isCannoning)
+    {
+        foreach (GameObject leaf in leaves)
+        {
+            var emissionModule = leaf.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isCannoning;           
+        }
+    }
+    
+    
+
+    
 }
