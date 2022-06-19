@@ -28,6 +28,6 @@ public class Enemy : MonoBehaviour
 
         rb.useGravity = true;
         rb.AddRelativeForce(forceDirection, ForceMode.Impulse);
-        Destroy(gameObject);
+        Destroy(gameObject, 2);
     }
 }
