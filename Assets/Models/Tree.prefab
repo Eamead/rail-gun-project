@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3882145885830742441}
   m_Layer: 0
   m_Name: Tree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Leaf Material
-  m_Shader: {fileID: 10511, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 10605, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -123,7 +123,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: 31631417311b2ec49a72324f89377865, type: 3}
+        m_Texture: {fileID: 2800000, guid: 90b35ea78677cd347a310717d0a1a5e2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Cube:
@@ -206,7 +206,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _ColorMode: 0
     - _Cull: 2
-    - _Cutoff: 0.431
+    - _Cutoff: 0.395
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
@@ -229,7 +229,7 @@ Material:
     - _Parallax: 0.02
     - _Rotation: 0
     - _ShadowOffsetScale: 1
-    - _ShadowStrength: 0.8
+    - _ShadowStrength: 0
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
@@ -238,13 +238,13 @@ Material:
     - _SpecularHighlights: 1
     - _SquashAmount: 1
     - _SrcBlend: 1
-    - _TranslucencyViewDependency: 0.7
+    - _TranslucencyViewDependency: 0.45
     - _UVSec: 0
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 0, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 1, b: 0.87736034, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 308
-  materialHash: 0537c76539335e191dcaae8130e7fdd4258572288
+  materialHash: 083a060c52156852cf9d3d0873892890258572288
   root:
     _uniqueID: 1
     seed: 854893
@@ -5970,7 +5970,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
-  m_Shader: {fileID: 10600, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 10604, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -5987,7 +5987,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
-        m_Texture: {fileID: 2800000, guid: 31631417311b2ec49a72324f89377865, type: 3}
+        m_Texture: {fileID: 2800000, guid: 90b35ea78677cd347a310717d0a1a5e2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlossMap:
@@ -5995,11 +5995,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 603c9a09ece800e479d460ba46cb446a, type: 3}
-        m_Scale: {x: 3.27, y: 6.57}
+        m_Texture: {fileID: 2800000, guid: 669d8f2a7b833244e832bfe2930d8b56, type: 3}
+        m_Scale: {x: 2.05, y: 2.55}
         m_Offset: {x: 1.22, y: 0}
     - _TranslucencyMap:
-        m_Texture: {fileID: 2800000, guid: 21d4500d45aa3c142b131706b173f4a1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8ebe54b21de44864ab2b447585317f99, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
