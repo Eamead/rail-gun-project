@@ -8,12 +8,12 @@ public class Enemy : MonoBehaviour
     Vector3 forceDirection;
 
     [SerializeField] GameObject boom;
-
+    [SerializeField] Transform parent;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        var boomVisual = boom.GetComponent<ParticleSystem>();
-        boomVisual.Stop();
+        //var boomVisual = boom.GetComponent<ParticleSystem>();
+        //boomVisual.Stop();
     }
 
     void OnParticleCollision(GameObject other) 
@@ -23,8 +23,11 @@ public class Enemy : MonoBehaviour
         float forceZ = -10f;
         forceDirection = new Vector3(forceX, forceY, forceZ);
 
-        var boomVisual = boom.GetComponent<ParticleSystem>();
-        boomVisual.Play();
+        
+        GameObject explode = Instantiate(boom, transform.position, Quaternion.identity);
+        explode.transform.parent = parent;
+        //var boomVisual = boom.GetComponent<ParticleSystem>();
+        //boomVisual.Play();
 
         rb.useGravity = true;
         rb.AddRelativeForce(forceDirection, ForceMode.Impulse);
