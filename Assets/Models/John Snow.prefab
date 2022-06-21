@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1775940675232734277}
   - component: {fileID: 1775940675232734274}
   - component: {fileID: 1775940675232734275}
-  - component: {fileID: 1775940675232734272}
   - component: {fileID: 1775940675232734279}
   - component: {fileID: 1775940675232734276}
   - component: {fileID: 3053454169540039400}
+  - component: {fileID: 509235115170686138}
   m_Layer: 0
   m_Name: John Snow
   m_TagString: Untagged
@@ -93,19 +93,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1775940675232734272
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775940675232734273}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1775940675232734279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +143,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &509235115170686138
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775940675232734273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000002
+  m_Height: 3.1793036
+  m_Direction: 1
+  m_Center: {x: 0.00001828786, y: -1.0895792, z: 0.00000031512323}
 --- !u!1 &1775940675347720237
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +250,7 @@ BoxCollider:
   m_GameObject: {fileID: 1775940675347720237}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -348,7 +349,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1775940675384283890}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -556,7 +557,7 @@ BoxCollider:
   m_GameObject: {fileID: 1775940675999591183}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -653,7 +654,7 @@ SphereCollider:
   m_GameObject: {fileID: 1775940676041204154}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -750,7 +751,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1775940676639983934}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -848,7 +849,7 @@ SphereCollider:
   m_GameObject: {fileID: 1775940677143174989}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
