@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Points : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    int points;
+    TMP_Text pointaroonis;
+
     void Start()
     {
-        
+        pointaroonis = GetComponent<TMP_Text>();
+        pointaroonis.text = "Pointaroonis: ";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IncreasePoints(int amountToIncrease)
     {
-        
+        points += amountToIncrease;
+        pointaroonis.text = "Pointaroonis: " + points.ToString();
     }
 }
