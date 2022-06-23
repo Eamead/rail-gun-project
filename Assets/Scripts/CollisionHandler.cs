@@ -8,12 +8,15 @@ public class CollisionHandler : MonoBehaviour
     
     [SerializeField] float delay = 1f;
     [SerializeField] ParticleSystem explosion;
-    
+    [SerializeField] AudioClip mel;
+
+    AudioSource audioSource;    
     Rigidbody rb;
 
     void Start()
         {
             rb = GetComponent<Rigidbody>();
+            audioSource = GetComponent<AudioSource>();
         }
     
     
@@ -22,6 +25,7 @@ public class CollisionHandler : MonoBehaviour
         if (other.gameObject.tag != "Player") 
         {
             explosion.Play();
+            audioSource.PlayOneShot(mel);
             rb.useGravity = true;
             GetComponent<PlayerControls>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
