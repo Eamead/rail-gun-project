@@ -34,6 +34,18 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
+    /*void OnParticleCollision(GameObject other) 
+    {
+        explosion.Play();
+        audioSource.PlayOneShot(mel);
+        rb.useGravity = true;
+        GetComponent<PlayerControls>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
+        Invoke("DeathorSomethinghahahaarentyoufuckingclever", delay);           
+        Debug.Log(this.name + "has collided with " + other.gameObject.name);
+    }
+    */
+    
     void DeathorSomethinghahahaarentyoufuckingclever()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

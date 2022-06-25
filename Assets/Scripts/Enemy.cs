@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform parent;
     [SerializeField] int value = 1;
     [SerializeField] int health = 1;
-
+    
     AudioSource audioSource;
     Points points;
 
@@ -49,13 +49,16 @@ public class Enemy : MonoBehaviour
 
     void increasePoints()    
     {
+        int bonus = value * 2;
+
         if (health >= 1)
         {
             points.IncreasePoints(value);
         }
         else if (health == 0)
         {                                      
-            points.IncreasePoints(value);
+            points.IncreasePoints(bonus);
+            Debug.Log("You gained " + bonus + " points for killing this enemy.");
             EnemyDeath();              
         }
     }
@@ -63,9 +66,9 @@ public class Enemy : MonoBehaviour
     void EnemyDeath()
     {
         checkAnimation();
-        float forceX = -10f;
+        float forceX = 0f;
         float forceY = 0;
-        float forceZ = -10f;
+        float forceZ = 30f;
         forceDirection = new Vector3(forceX, forceY, forceZ);
 
 

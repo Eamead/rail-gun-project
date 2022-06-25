@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour
     [Header("General Setup Settings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
+    [SerializeField] AudioClip leafer;
 
     [Header("Leaf Shooting Array")]
     [SerializeField] GameObject[] leaves;
@@ -41,6 +42,8 @@ public class PlayerControls : MonoBehaviour
 
     //ParticleSystem partStart;
 
+    AudioSource audioSource;
+    
     float horizontalSlide;
     float verticalSlide;
 
@@ -48,6 +51,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //partStart = GetComponent<ParticleSystem>();
     }
 
@@ -109,7 +113,6 @@ public class PlayerControls : MonoBehaviour
         // If the fire button is held, fire a leaf.
         if (fire.ReadValue<float>() > 0)
         {
-            //partStart.enabled = true;
             toggleLeafCannon(true);
         }
         else
