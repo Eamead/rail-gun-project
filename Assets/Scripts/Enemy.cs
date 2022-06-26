@@ -13,10 +13,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject hitFX;
     [SerializeField] AudioClip hitsound;
     [SerializeField] AudioClip juicedie;
-    [SerializeField] Transform parent;
     [SerializeField] int value = 1;
     [SerializeField] int health = 1;
     
+    GameObject parentGameObject;
     AudioSource audioSource;
     Points points;
 
@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         points = FindObjectOfType<Points>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Enemy Health: " + health);
         increasePoints();
         GameObject hit = Instantiate(hitFX, transform.position, Quaternion.identity);
-        hit.transform.parent = parent;
+        hit.transform.parent = parentGameObject.transform;
         audioSource.PlayOneShot(hitsound);
     }
 
@@ -73,7 +74,7 @@ public class Enemy : MonoBehaviour
 
 
         GameObject explode = Instantiate(boom, transform.position, Quaternion.identity);
-        explode.transform.parent = parent;
+        explode.transform.parent = parentGameObject.transform;
                     
         rb.useGravity = true;
         rb.AddRelativeForce(forceDirection, ForceMode.Impulse);

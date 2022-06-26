@@ -8,6 +8,7 @@ TagManager:
   - Mayor
   - Juice
   - Tree
+  - SpawnAtRuntime
   layers:
   - Default
   - TransparentFX
